@@ -1,0 +1,47 @@
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 40px;
+    
+    &--md {
+        font-size: 0.68rem;
+        width: 240px;
+        height: 38px;
+        background: $c-pink;
+        color: #fff;
+
+        @media (min-width: 481px) {
+            width: 260px;
+            height: 50px;
+        } 
+
+        @media (min-width: 1025px) {
+            font-size: 0.78rem;
+            width: 280px;
+            height: 56px;
+        }
+    }
+
+    &--sm {
+        width: 95px;
+        height: 24px;
+        background: #fff;
+        font-size: 0.58rem;
+        color: #000;
+
+        @media (min-width: 481px) {
+            width: 150px;
+            height: 40px;
+            font-size: 0.65rem;
+        }
+        
+        @media (min-width: 769px) {
+            width: 200px;
+            height: 48px;
+            font-size: 0.78rem;
+        }
+    }
+}
