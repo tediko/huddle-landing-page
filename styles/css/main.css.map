@@ -8,7 +8,8 @@
         "../sass/base/_reset.scss",
         "../sass/base/_typography.scss",
         "../sass/components/_buttons.scss",
-        "../sass/layout/_main.scss"
+        "../sass/layout/_main.scss",
+        "../sass/layout/_kv.scss"
     ],
     "names": [],
     "file": "main.css"
