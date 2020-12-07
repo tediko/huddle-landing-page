@@ -2,7 +2,7 @@
     background: url('../../assets/img/bg-hero-mobile.svg'), $c-cyan-very-pale;
     background-repeat: no-repeat;
 
-    @media (min-width: 769px) {
+    @include breakpoint('md') {
         background: url('../../assets/img/bg-hero-desktop.svg'), $c-cyan-very-pale;
         background-repeat: no-repeat; 
     }
@@ -12,7 +12,7 @@
         flex-flow: column;
         padding: 12px 17px 30px 17px;
         
-        @media (min-width: 769px) {
+        @include breakpoint('md') {
             padding: 51px 30px 65px 30px;
             max-width: 1340px;
             margin: 0 auto;
@@ -26,7 +26,7 @@
         margin-bottom: 70px;
         height: 50px;
 
-        @media (min-width: 1025px) {
+        @include breakpoint('lg') {
             margin-bottom: 60px;
         }
     }
@@ -35,11 +35,11 @@
         img {
             width: 101px;
 
-            @media (min-width: 481px) {
+            @include breakpoint('sm') {
                 width: 60%;
             }
 
-            @media (min-width: 769px) {
+            @include breakpoint('md') {
                 width: 83%;
             }
         }
@@ -49,7 +49,7 @@
         display: flex;
         flex-flow: column;
 
-        @media (min-width: 769px) {
+        @include breakpoint('md') {
             flex-flow: row;
         }
     }
@@ -61,14 +61,14 @@
         text-align: center;
         margin-bottom: 55px;
 
-        @media (min-width: 769px) {
+        @include breakpoint('md') {
             align-items: flex-start;
             text-align: left;
             flex: 1 0 44%;
             margin-right: 20px;
         }
 
-        @media (min-width: 1025px) {
+        @include breakpoint('lg') {
             min-width: 435px;
         }
     }
@@ -77,15 +77,15 @@
         max-width: 323px;
         margin-bottom: 23px;
 
-        @media (min-width: 481px) {
+        @include breakpoint('sm') {
             max-width: 370px;
         }
 
-        @media (min-width: 769px) {
+        @include breakpoint('md') {
             max-width: 320px;
         }
 
-        @media (min-width: 1025px) {
+        @include breakpoint('lg') {
             max-width: 454px;
             margin-top: 98px;
             margin-bottom: 28px;
@@ -96,11 +96,11 @@
         max-width: 315px;
         margin-bottom: 34px;
 
-        @media (min-width: 481px) {
+        @include breakpoint('sm') {
             max-width: 450px;
         }
 
-        @media (min-width: 1025px) {
+        @include breakpoint('lg') {
             max-width: 520px;
         } 
     }
@@ -109,7 +109,7 @@
         display: flex;
         justify-content: center;
 
-        @media (min-width: 769px) {
+        @include breakpoint('md') {
             justify-content: flex-end;
             align-items: center;
         }
@@ -117,7 +117,7 @@
         img {
             width: 88%;
 
-            @media (min-width: 1025px) {
+            @include breakpoint('lg') {
                 width: 100%;
             }
         }
