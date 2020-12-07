@@ -2,6 +2,11 @@
     background: url('../../assets/img/bg-hero-mobile.svg'), $c-cyan-very-pale;
     background-repeat: no-repeat;
 
+    @media (min-width: 769px) {
+        background: url('../../assets/img/bg-hero-desktop.svg'), $c-cyan-very-pale;
+        background-repeat: no-repeat; 
+    }
+
     &__container {
         display: flex;
         flex-flow: column;
