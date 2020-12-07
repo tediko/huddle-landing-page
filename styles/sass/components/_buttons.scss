@@ -5,8 +5,11 @@
     text-decoration: none;
     font-weight: 700;
     border-radius: 40px;
+    overflow: hidden;
+    z-index: 1;
     
     &--md {
+        position: relative;
         font-size: 0.68rem;
         width: 240px;
         height: 38px;
@@ -16,7 +19,36 @@
         @media (min-width: 481px) {
             width: 260px;
             height: 50px;
-        } 
+        }
+
+        @media (min-width: 769px) {
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background: lighten($c-pink, 10);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 300ms ease-in;
+                z-index: -1;
+            }
+
+            &::after {
+                @extend .cta--md::before;
+                left: unset;
+                right: 0;
+                transform-origin: right;
+            }
+
+            &:hover {
+                &::before, &::after {
+                    transform: scaleX(1);
+                }
+            }
+        }
 
         @media (min-width: 1025px) {
             font-size: 0.78rem;
@@ -26,6 +58,7 @@
     }
 
     &--sm {
+        position: relative;
         width: 95px;
         height: 24px;
         background: #fff;
@@ -42,6 +75,12 @@
             width: 200px;
             height: 48px;
             font-size: 0.78rem;
+            transition: color 300ms ease-in;
+
+            &:hover {
+                color: lighten(#000, 50);
+                animation: btn-shake 500ms ease-in;
+            }
         }
     }
 }

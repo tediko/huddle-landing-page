@@ -29,6 +29,24 @@
   }
 }
 
+@keyframes btn-shake {
+  0% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -54,9 +72,12 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-weight: 700;
   border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .cta--md {
+  position: relative;
   font-size: 0.68rem;
   width: 240px;
   height: 38px;
@@ -71,6 +92,30 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 769px) {
+  .cta--md::before, .cta--md::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #ff85d2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in;
+    z-index: -1;
+  }
+  .cta--md::after {
+    left: unset;
+    right: 0;
+    transform-origin: right;
+  }
+  .cta--md:hover::before, .cta--md:hover::after, .cta--md:hover::after {
+    transform: scaleX(1);
+  }
+}
+
 @media (min-width: 1025px) {
   .cta--md {
     font-size: 0.78rem;
@@ -80,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta--sm {
+  position: relative;
   width: 95px;
   height: 24px;
   background: #fff;
@@ -100,12 +146,24 @@ h1, h2, h3, h4, h5, h6 {
     width: 200px;
     height: 48px;
     font-size: 0.78rem;
+    transition: color 300ms ease-in;
+  }
+  .cta--sm:hover {
+    color: gray;
+    animation: btn-shake 500ms ease-in;
   }
 }
 
 .kv {
   background: url("../../assets/img/bg-hero-mobile.svg"), #ebfbff;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 769px) {
+  .kv {
+    background: url("../../assets/img/bg-hero-desktop.svg"), #ebfbff;
+    background-repeat: no-repeat;
+  }
 }
 
 .kv__container {
