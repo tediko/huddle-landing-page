@@ -180,6 +180,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 1025px) {
+  .kv__info {
+    min-width: 435px;
+  }
+}
+
 .kv__info-heading {
   max-width: 323px;
   margin-bottom: 23px;

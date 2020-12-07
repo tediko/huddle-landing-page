@@ -62,6 +62,10 @@
             flex: 1 0 44%;
             margin-right: 20px;
         }
+
+        @media (min-width: 1025px) {
+            min-width: 435px;
+        }
     }
 
     &__info-heading {
