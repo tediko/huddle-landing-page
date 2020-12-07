@@ -12,7 +12,8 @@
         "../sass/components/_buttons.scss",
         "../sass/layout/_main.scss",
         "../sass/layout/_kv.scss",
-        "../sass/layout/_features.scss"
+        "../sass/layout/_features.scss",
+        "../sass/layout/_footer.scss"
     ],
     "names": [],
     "file": "main.css"
