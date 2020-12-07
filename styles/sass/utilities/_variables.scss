@@ -7,3 +7,10 @@ $c-blue-dark: hsl(208, 11%, 55%);
 /* Fonts */
 $ff-primary: 'Open Sans', sans-serif;
 $ff-secondary: 'Poppins', sans-serif;
+
+/* Media queries breakpoints */
+$breakpoints: (
+  'sm':  481px,
+  'md': 769px,
+  'lg':  1025px
+);
