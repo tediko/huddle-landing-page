@@ -62,6 +62,7 @@
         align-items: center;
         text-align: center;
         margin-bottom: 55px;
+        animation: kv-info-slide-left 1000ms ease-in-out;
 
         @include breakpoint('md') {
             align-items: flex-start;
@@ -110,6 +111,7 @@
     &__hero {
         display: flex;
         justify-content: center;
+        animation: kv-hero-popup 1000ms ease-in-out;
 
         @include breakpoint('md') {
             justify-content: flex-end;
