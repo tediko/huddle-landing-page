@@ -20,6 +20,22 @@
   }
 }
 
+.h--big {
+  font-size: 1rem;
+}
+
+@media (min-width: 769px) {
+  .h--big {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .h--big {
+    font-size: 1.76rem;
+  }
+}
+
 .h--md {
   font-size: 1.1rem;
 }
@@ -104,6 +120,55 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 40px;
   overflow: hidden;
   z-index: 1;
+}
+
+.cta--lg {
+  position: relative;
+  font-size: 0.68rem;
+  width: 240px;
+  height: 38px;
+  background: #ff52bf;
+  color: #fff;
+  box-shadow: 0px 7px 14px -8px #ff52bf;
+}
+
+@media (min-width: 481px) {
+  .cta--lg {
+    width: 260px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta--lg::before, .cta--lg::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #ff85d2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in;
+    z-index: -1;
+  }
+  .cta--lg::after {
+    left: unset;
+    right: 0;
+    transform-origin: right;
+  }
+  .cta--lg:hover::before, .cta--lg:hover::after, .cta--lg:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (min-width: 1025px) {
+  .cta--lg {
+    font-size: 1.1rem;
+    width: 400px;
+    height: 80px;
+  }
 }
 
 .cta--md {
@@ -440,7 +505,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
+  position: relative;
   background: #00252e;
+}
+
+.footer__start {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  top: -119px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 20px);
+  max-width: 500px;
+  padding: 44px 0 40px 0;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 769px) {
+  .footer__start {
+    top: -161px;
+    padding: 65px 0 53px 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer__start {
+    top: -183px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+  }
+}
+
+.footer__start-heading {
+  margin-bottom: 26px;
+}
+
+@media (min-width: 769px) {
+  .footer__start-heading {
+    margin-bottom: 34px;
+  }
 }
 
 .footer__container {
