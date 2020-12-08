@@ -1,5 +1,42 @@
 .footer {
+    position: relative;
     background: $c-cyan-very-dark;
+
+    &__start {
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        top: -119px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 20px);
+        max-width: 500px;
+        padding: 44px 0 40px 0;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+
+        @include breakpoint('md') {
+            top: -161px;
+            padding: 65px 0 53px 0;
+        }
+
+        @include breakpoint('lg') {
+            top: -183px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 800px;
+        }
+    }
+
+    &__start-heading {
+        margin-bottom: 26px;
+
+        @include breakpoint('md') {
+            margin-bottom: 34px;
+        }
+    }
 
     &__container {
         display: flex;
