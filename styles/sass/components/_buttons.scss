@@ -8,6 +8,11 @@
     overflow: hidden;
     z-index: 1;
 
+    &:focus {
+        outline: 1px dotted lighten($c-blue-dark, 30);
+        outline-offset: 5px;
+    }
+
     &--lg {
         position: relative;
         font-size: 0.68rem;

@@ -204,6 +204,11 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+.cta:focus {
+  outline: 1px dotted #d5d9dd;
+  outline-offset: 5px;
+}
+
 .cta--lg {
   position: relative;
   font-size: 0.68rem;
