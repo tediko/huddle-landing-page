@@ -1,6 +1,8 @@
 .features {
     $this : &;
 
+    
+
     &__container {
         display: flex;
         flex-flow: column;
@@ -27,6 +29,7 @@
         border-radius: 15px;
         text-align: center;
         padding: 57px 36px 34px 36px;
+        opacity: 0;
 
         @include breakpoint('md') {
             flex-flow: row;
@@ -51,6 +54,20 @@
                 #{$this}__card-image {
                     justify-content: flex-start;
                 }
+            }
+        }
+
+        &.active {
+            &:first-child {
+                animation: card-slide-left 1000ms ease-in forwards;
+            }
+            
+            &:nth-child(2) {
+                animation: card-slide-right 1000ms ease-in forwards;
+            }
+            
+            &:last-child {
+                animation: card-slide-bottom 1000ms ease-in forwards;
             }
         }
     }
