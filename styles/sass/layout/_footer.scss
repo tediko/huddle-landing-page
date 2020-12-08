@@ -129,6 +129,11 @@
     &__contact-link {
         color: #fff;
         text-decoration: none;
+
+        &:focus {
+            outline: 1px dotted lighten($c-blue-dark, 30);
+            outline-offset: 5px;
+        }
     }
 
     &__nav {
@@ -164,6 +169,11 @@
         position: relative;
         color: #fff;
         text-decoration: none;
+
+        &:focus {
+            outline: 1px dotted lighten($c-blue-dark, 30);
+            outline-offset: 5px;
+        }
 
         &::before {
             position: absolute;
@@ -211,6 +221,11 @@
         font-size: 0.8rem;
         transition: border 250ms ease-in-out,
                     background 250ms ease-in-out;
+        
+        &:focus {
+        outline: 1px dotted lighten($c-blue-dark, 30);
+        outline-offset: 5px;
+        }
 
         &:not(:last-child) {
             margin-right: 15px;

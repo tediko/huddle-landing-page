@@ -762,6 +762,11 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.footer__contact-link:focus {
+  outline: 1px dotted #d5d9dd;
+  outline-offset: 5px;
+}
+
 .footer__nav {
   margin-bottom: 60px;
 }
@@ -799,6 +804,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #fff;
   text-decoration: none;
+}
+
+.footer__nav-link:focus {
+  outline: 1px dotted #d5d9dd;
+  outline-offset: 5px;
 }
 
 .footer__nav-link::before {
@@ -849,6 +859,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   font-size: 0.8rem;
   transition: border 250ms ease-in-out, background 250ms ease-in-out;
+}
+
+.footer__socials-link:focus {
+  outline: 1px dotted #d5d9dd;
+  outline-offset: 5px;
 }
 
 .footer__socials-link:not(:last-child) {
