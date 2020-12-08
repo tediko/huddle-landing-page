@@ -15,3 +15,15 @@
         transform: rotate(0);
     }
 }
+
+@keyframes socials-link-shake {
+    0% {
+        transform: translateY(-3px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
