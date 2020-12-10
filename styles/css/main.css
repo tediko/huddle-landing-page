@@ -480,13 +480,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .kv__hero {
   position: relative;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
   animation: kv-hero-popup 1000ms ease-in-out;
 }
 
 @media (min-width: 769px) {
   .kv__hero {
+    display: flex;
+    text-align: unset;
     justify-content: flex-end;
     align-items: center;
   }
