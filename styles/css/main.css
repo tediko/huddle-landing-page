@@ -401,6 +401,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kv__content {
+  position: relative;
   display: flex;
   flex-flow: column;
 }
@@ -478,6 +479,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kv__hero {
+  position: relative;
   display: flex;
   justify-content: center;
   animation: kv-hero-popup 1000ms ease-in-out;
