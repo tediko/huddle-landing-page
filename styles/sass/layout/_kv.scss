@@ -48,6 +48,7 @@
     }
 
     &__content {
+        position: relative;
         display: flex;
         flex-flow: column;
 
@@ -109,6 +110,7 @@
     }
 
     &__hero {
+        position: relative;
         display: flex;
         justify-content: center;
         animation: kv-hero-popup 1000ms ease-in-out;
